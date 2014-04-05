@@ -127,6 +127,28 @@
 
         #endregion
 
+        public static int GetInt32(this byte[] data, int index = 0)
+        {
+            int result = data[index++];
+            
+            result |= data[index++] << 8;
+            result |= data[index++] << 16;
+            result |= data[index] << 24;
+            
+            return result;
+        }
+
+        public static uint GetUInt32(this byte[] data, int index = 0)
+        {
+            uint result = data[index++];
+
+            result |= (uint)(data[index++] << 8);
+            result |= (uint)(data[index++] << 16);
+            result |= (uint)(data[index] << 24);
+
+            return result;
+        }
+
         public static int GetInt32(this ushort[] data, int index = 0)
         {
             int result = data[index++];

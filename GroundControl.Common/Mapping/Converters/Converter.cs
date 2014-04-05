@@ -9,22 +9,19 @@
     [KnownType(typeof(DefaultConverter))]
     [KnownType(typeof(MatchCrc16Converter))]
     [KnownType(typeof(ToUnixTimeConverter))]
+    [KnownType(typeof(BitsToStringConverter))]
     [KnownType(typeof(ToStringConverter<byte>))]
     [KnownType(typeof(ToStringConverter<ushort>))]
     [KnownType(typeof(ToStringConverter<uint>))]
-//    [KnownType(typeof(ToStringConverter<ulong>))]
     [KnownType(typeof(ToStringConverter<sbyte>))]
     [KnownType(typeof(ToStringConverter<short>))]
     [KnownType(typeof(ToStringConverter<int>))]
-//    [KnownType(typeof(ToStringConverter<long>))]
     [KnownType(typeof(ToStringConverterPairConverter<byte>))]
     [KnownType(typeof(ToStringConverterPairConverter<ushort>))]
     [KnownType(typeof(ToStringConverterPairConverter<uint>))]
-//    [KnownType(typeof(ToStringConverterPairConverter<ulong>))]
     [KnownType(typeof(ToStringConverterPairConverter<sbyte>))]
     [KnownType(typeof(ToStringConverterPairConverter<short>))]
     [KnownType(typeof(ToStringConverterPairConverter<int>))]
-//    [KnownType(typeof(ToStringConverterPairConverter<long>))]
     public abstract class Converter : IValueConverter
     {
         #region Constructors

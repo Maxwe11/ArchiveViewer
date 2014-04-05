@@ -13,7 +13,7 @@
         void Visit(UnsignedInteger32 p);
 //        void Visit(UInt64 p);
         void Visit(Float p);
-//        void Visit(Double p);
+        void Visit(Double p);
 //        void Visit(UnixTime p);
     }
 }

@@ -16,10 +16,14 @@
 
         #endregion
 
+        #region KeyedCollection
+
         protected override byte? GetKeyForItem(ParametersCollection item)
         {
             return item.CollectionId;
         }
+
+        #endregion
 
         public new void Add(ParametersCollection collection)
         {

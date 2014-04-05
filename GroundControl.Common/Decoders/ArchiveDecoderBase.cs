@@ -5,7 +5,6 @@
 
     using GroundControl.Common.Decoders.Archives;
 
-    [XmlInclude(typeof(EventsArchiveDecoder))]
     [XmlInclude(typeof(ComplexArchiveDecoder))]
     public abstract class ArchiveDecoderBase
     {

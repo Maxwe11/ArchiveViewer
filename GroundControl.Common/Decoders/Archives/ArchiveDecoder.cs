@@ -1,10 +1,11 @@
 ﻿namespace GroundControl.Common.Decoders.Archives
 {
     using System;
-    using System.Linq;
+    using System.Data;
 
     using GroundControl.Common.Extensions;
     using GroundControl.Common.Mapping.Parameters;
+    using GroundControl.Common.Models.Archives;
 
     public class ArchiveDecoder : IArchiveDecoder
     {
@@ -16,24 +17,20 @@
 
         #region Constructor
 
-        internal ArchiveDecoder(ArchiveDecoderType type, ParametersKeyedCollection collection)
+        internal ArchiveDecoder(ArchiveType type)
         {
-            collection.CheckNull("collection");
+            type.CheckNull("type");
 
-            switch (type)
+            switch (type.DecoderType)
             {
-            case ArchiveDecoderType.Simple:
-                mDecoder = new SimpleArchiveDecoder(collection.First());
-                break;
             case ArchiveDecoderType.Complex:
-                mDecoder = new ComplexArchiveDecoder(collection);
+                mDecoder = new ComplexArchiveDecoder(type);
                 break;
             case ArchiveDecoderType.CustomSimple:
-                mDecoder = new CustomSimpleArchiveDecoder(collection.First());
+                mDecoder = new CustomSimpleArchiveDecoder(type);
                 break;
             default:
-                throw new ArgumentException("Unknown decoder type with value " + (int)type, "type");
-
+                throw new ArgumentException("Unknown decoder type with value " + (int)type.DecoderType, "type");
             }
         }
 
@@ -50,6 +47,8 @@
         {
             return mDecoder.Decode(data);
         }
+
+        public virtual DataTable Template { get { return mDecoder.Template; }}
 
         #endregion
     }

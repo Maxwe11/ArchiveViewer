@@ -1,10 +1,14 @@
 ﻿namespace GroundControl.Archives
 {
     using System;
+    using System.IO;
 
+    using GroundControl.Archives.Services;
     using GroundControl.Archives.ViewModels;
     using GroundControl.Archives.Views;
     using GroundControl.Common.Extensions;
+    using GroundControl.Common.Mapping.Converters;
+    using GroundControl.Common.Models.Archives;
     using GroundControl.Common.Services;
     using GroundControl.Common;
 
@@ -35,7 +39,13 @@
             service = bundle.GetService(typeof(ISerialPortService));
             mSerialPortService = (ISerialPortService)service;
 
-            //var archives = ArchiveType.LoadArchives(Path.Combine(bundle.ConfigurationPath, "archives"));
+            var path = Path.Combine(bundle.ConfigurationPath, "archives");
+            var archivesProvider = new ArchivesProviderService(path);
+            
+            bundle.RegisterService(typeof(IDataProviderService<ArchiveType>), archivesProvider);
+
+            ConvertersCollection.Instance(Path.Combine(bundle.ConfigurationPath, "converters.xml"));
+            var archives = archivesProvider.GetCollection();
 
             mViewModel = new Lazy<ArchivesViewModel>(() =>
             {
@@ -47,11 +57,12 @@
             {
                 var viewModel = mViewModel.Value;
                 var view = new ArchivesView(viewModel);
-                //viewModel.AddArchives(archives);
+                viewModel.AddArchives(archives);
                 return view;
             });
 
             //TO DO: check LoadArchives error
+            //TO DO: check ServiceNotFoundException
         }
 
         #endregion

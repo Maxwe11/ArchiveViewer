@@ -1,8 +1,9 @@
-﻿namespace GroundControl.Services
+﻿namespace GroundControl.Archives.Services
 {
     using System;
     using System.Collections.ObjectModel;
     using System.IO;
+    using System.Linq;
     using System.Runtime.Serialization;
     using System.Xml;
 
@@ -10,13 +11,12 @@
     using GroundControl.Common.Helpers;
     using GroundControl.Common.Models.Archives;
     using GroundControl.Common.Services;
-    using GroundControl.Properties;
 
     internal class ArchivesProviderService : IDataProviderService<ArchiveType>
     {
         #region Fields
 
-        private readonly ILoggingService mLogger;
+        //private readonly ILoggingService mLogger;
 
         private readonly Lazy<Collection<ArchiveType>> mLazy;
 
@@ -24,12 +24,13 @@
 
         #region Constructor
 
-        internal ArchivesProviderService(ILoggingService logger, string path)
+        //internal ArchivesProviderService(ILoggingService logger, string path)
+        internal ArchivesProviderService(string path)
         {
-            logger.CheckNull("logger");
+//            logger.CheckNull("logger");
             path.CheckNull("path");
 
-            mLogger = logger;
+//            mLogger = logger;
             mLazy = new Lazy<Collection<ArchiveType>>(() => Load(path));
         }
 
@@ -60,11 +61,14 @@
                 try
                 {
                     using (var reader = XmlReader.Create(config))
-                        archives.Add((ArchiveType)serializer.ReadObject(reader));
+                    {
+                        var archiveType = (ArchiveType)serializer.ReadObject(reader);
+                        archives.Add(archiveType);
+                    }
                 }
-                catch (Exception ex)
+                catch //(Exception ex)
                 {
-                    mLogger.LogToUser(Strings.FailedToLoadArchive + config);
+                    //mLogger.LogToUser(Strings.FailedToLoadArchive + config);
                 }
             }
 

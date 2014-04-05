@@ -49,7 +49,7 @@
             this.mPosRecRegValueTextBox = new Telerik.WinControls.UI.RadTextBox();
             this.mCmndRegValueTextBox = new Telerik.WinControls.UI.RadTextBox();
             this.mArchiveRecordsGridView = new Telerik.WinControls.UI.RadGridView();
-            this.mArchiveRecordsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mArchiveBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mRecordsReadingGroupBox = new Telerik.WinControls.UI.RadGroupBox();
             this.mReadRecordsBtn = new Telerik.WinControls.UI.RadButton();
             this.mRecordsCountSpinEditor = new Telerik.WinControls.UI.RadSpinEditor();
@@ -86,7 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(PosRecRegLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mArchiveRecordsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mArchiveRecordsGridView.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mArchiveRecordsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mArchiveBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mRecordsReadingGroupBox)).BeginInit();
             this.mRecordsReadingGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mReadRecordsBtn)).BeginInit();
@@ -249,9 +249,9 @@
             // 
             DataRegLabel.Location = new System.Drawing.Point(9, 73);
             DataRegLabel.Name = "DataRegLabel";
-            DataRegLabel.Size = new System.Drawing.Size(79, 18);
+            DataRegLabel.Size = new System.Drawing.Size(51, 18);
             DataRegLabel.TabIndex = 11;
-            DataRegLabel.Text = "DataRegValue:";
+            DataRegLabel.Text = "DataReg:";
             // 
             // mCmndRegValueTextBox
             // 
@@ -280,6 +280,7 @@
             // 
             // mArchiveRecordsGridView
             // 
+            this.mArchiveRecordsGridView.AutoScroll = true;
             this.mArchiveRecordsGridView.AutoSizeRows = true;
             tableLayoutPanel.SetColumnSpan(this.mArchiveRecordsGridView, 4);
             this.mArchiveRecordsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -290,8 +291,7 @@
             this.mArchiveRecordsGridView.MasterTemplate.AllowAddNewRow = false;
             this.mArchiveRecordsGridView.MasterTemplate.AllowColumnReorder = false;
             this.mArchiveRecordsGridView.MasterTemplate.AllowDeleteRow = false;
-            this.mArchiveRecordsGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.mArchiveRecordsGridView.MasterTemplate.DataSource = this.mArchiveRecordsBindingSource;
+            this.mArchiveRecordsGridView.MasterTemplate.DataSource = this.mArchiveBindingSource;
             this.mArchiveRecordsGridView.MasterTemplate.EnableGrouping = false;
             this.mArchiveRecordsGridView.MasterTemplate.EnableSorting = false;
             this.mArchiveRecordsGridView.Name = "mArchiveRecordsGridView";
@@ -300,6 +300,7 @@
             this.mArchiveRecordsGridView.TabIndex = 1;
             this.mArchiveRecordsGridView.Text = "radGridView1";
             this.mArchiveRecordsGridView.ThemeName = "VisualStudio2012Light";
+            this.mArchiveRecordsGridView.ContextMenuOpening += new Telerik.WinControls.UI.ContextMenuOpeningEventHandler(this.OnArchiveRecordsGridViewContextMenuOpening);
             this.mArchiveRecordsGridView.DataBindingComplete += new Telerik.WinControls.UI.GridViewBindingCompleteEventHandler(this.OnArchiveRecordsGridViewDataBindingComplete);
             // 
             // mRecordsReadingGroupBox
@@ -395,7 +396,7 @@
             ((System.ComponentModel.ISupportInitialize)(PosRecRegLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mArchiveRecordsGridView.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mArchiveRecordsGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mArchiveRecordsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mArchiveBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mRecordsReadingGroupBox)).EndInit();
             this.mRecordsReadingGroupBox.ResumeLayout(false);
             this.mRecordsReadingGroupBox.PerformLayout();
@@ -410,7 +411,7 @@
 
         #endregion
 
-        private System.Windows.Forms.BindingSource mArchiveRecordsBindingSource;
+        private System.Windows.Forms.BindingSource mArchiveBindingSource;
         private Telerik.WinControls.UI.RadGridView mArchiveRecordsGridView;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme mVisualStudio2012LightTheme;
         private Telerik.WinControls.UI.RadButton mReadRecordsBtn;

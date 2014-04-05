@@ -45,7 +45,7 @@
             mManager = manager;
             mDecoder = type.Decoder;
 
-            //ArchiveRecords = mDecoder.Template;
+            ArchiveRecords = mDecoder.Template;
             DisplayName = type.DisplayName;
 
             ReadRecordsCommand = new RelayCommand(ReadRecords);
@@ -175,14 +175,14 @@
             {
                 using (new ViewModelBlocker(this))
                 {
-//                    ArchiveRecords.Clear();
-//                    var regs = await Task.Factory.StartNew(() => mManager.ReadRecords(RecordPosition, RecordsCount));
-//
-//                    if (regs == null)
-//                        return;
-//
-//                    var records = await Task.Factory.StartNew(() => mDecoder.Decode(regs));
-//                    ArchiveRecords.AddRange(records);
+                    ArchiveRecords.Clear();
+                    var regs = await Task.Factory.StartNew(() => mManager.ReadRecords(RecordPosition, RecordsCount));
+
+                    if (regs == null)
+                        return;
+
+                    var decodeResult = await Task.Factory.StartNew(() => mDecoder.Decode(regs));
+                    ArchiveRecords.Merge(decodeResult.Data);
                 }
             }
             catch (Exception ex)

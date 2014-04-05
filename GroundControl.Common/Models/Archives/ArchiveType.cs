@@ -18,14 +18,16 @@
 
         #region Constructor
 
-        public ArchiveType(int id, string displayName, byte slaveId, ushort cmdRegAdr, ushort recordRegsCount, ArchiveDecoderType type, ParametersKeyedCollection parameters)
+        public ArchiveType(int id, string displayName, byte slaveId, ushort cmdRegAdr, ushort recordRegsCount, ushort recordsCount, ArchiveDecoderType type, byte metadataSize, ParametersKeyedCollection parameters)
         {
             Id = id;
             DisplayName = displayName;
             SlaveId = slaveId;
             CommandRegister = cmdRegAdr;
             RecordRegistersCount = recordRegsCount;
+            RecordsCount = recordsCount;
             DecoderType = type;
+            RecordMetaDataBytesCount = metadataSize;
             Parameters = parameters;
         }
 
@@ -59,9 +61,12 @@
         public ArchiveDecoderType DecoderType { get; private set; }
 
         [DataMember(IsRequired = true, Order = 7)]
+        public byte RecordMetaDataBytesCount { get; private set; }
+
+        [DataMember(IsRequired = true, Order = 8)]
         public ParametersKeyedCollection Parameters { get; private set; }
 
-        public ArchiveDecoder Decoder { get { return mDecoder ?? (mDecoder = new ArchiveDecoder(DecoderType, Parameters)); } }
+        public ArchiveDecoder Decoder { get { return mDecoder ?? (mDecoder = new ArchiveDecoder(this)); } }
 
         #endregion
     }

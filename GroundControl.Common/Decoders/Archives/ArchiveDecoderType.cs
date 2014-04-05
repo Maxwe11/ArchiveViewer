@@ -6,8 +6,6 @@
     public enum ArchiveDecoderType
     {
         [EnumMember]
-        Simple,
-        [EnumMember]
         Complex,
         [EnumMember]
         CustomSimple

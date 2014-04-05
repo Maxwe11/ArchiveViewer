@@ -4,7 +4,7 @@
     using System.Runtime.Serialization;
 
     [DataContract]
-    class ToStringConverterPairConverter<T> : Converter
+    public class ToStringConverterPairConverter<T> : Converter
     {
         private static readonly StringConverterPair DefaultPair = new StringConverterPair("Uknown", "DefaultConverter");
 

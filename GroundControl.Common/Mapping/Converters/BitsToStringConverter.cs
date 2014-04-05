@@ -14,6 +14,7 @@
         public BitsToStringConverter(string name)
             : base(name)
         {
+            Collection = new KeyValuePairsCollection<byte, string>();
         }
 
         #endregion
@@ -31,14 +32,13 @@
         {
             value.CheckNull("value");
 
-            var integer = (Integer32)value;
-            var typedValue = integer.TypedValue;
+            var integer = (int)value;
             var builder = new StringBuilder(500);
 
-            builder.AppendFormat("{0}: ", typedValue);
+            builder.AppendFormat("0x{0:X}: ", integer);
             foreach (var bitPair in Collection)
             {
-                if ((typedValue & (1 << bitPair.First)) != 0)
+                if ((integer & (1 << bitPair.First)) != 0)
                     builder.AppendLine(bitPair.Second);
             }
 

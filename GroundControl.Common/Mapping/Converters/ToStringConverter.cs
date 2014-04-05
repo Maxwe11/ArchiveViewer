@@ -32,7 +32,7 @@
             try
             {
                 var str = Collection[key];
-                return str;
+                return str.Second;
             }
             catch (Exception)
             {

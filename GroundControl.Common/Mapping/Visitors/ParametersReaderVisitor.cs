@@ -99,11 +99,11 @@
             p.TypedValue = ReadFloat();
         }
 
-//        public void Visit(Double p)
-//        {
-//            p.TypedValue = ReadDouble();
-//        }
-//
+        public void Visit(Parameters.Double p)
+        {
+            p.TypedValue = ReadDouble();
+        }
+
 //        public void Visit(UnixTime p)
 //        {
 //            p.TypedValue = ReadDateTime();
@@ -388,28 +388,28 @@
             return result;
         }
 
-//        private double ReadDouble()
-//        {
-//            byte byte1 = GetByteFromArray();
-//            byte byte2 = GetByteFromArray(ByteBitsCount);
-//            byte byte3 = GetByteFromArray(WordBitsCount);
-//            byte byte4 = GetByteFromArray(WordBitsCount + ByteBitsCount);
-//            byte byte5 = GetByteFromArray(DWordBitsCount);
-//            byte byte6 = GetByteFromArray(DWordBitsCount + ByteBitsCount);
-//            byte byte7 = GetByteFromArray(DWordBitsCount + WordBitsCount);
-//            byte byte8 = GetByteFromArray(DWordBitsCount + WordBitsCount + ByteBitsCount);
-//            byte[] bytes = { byte1, byte2, byte3, byte4, byte5, byte6, byte7, byte8 };
-//
-//            if (!BitConverter.IsLittleEndian)
-//                Array.Reverse(bytes);
-//
-//            ulong result = BitConverter.ToUInt64(bytes, 0);
-//
-//            mBitsRead += QWordBitsCount;
-//
-//            return result;
-//        }
-//
+        private double ReadDouble()
+        {
+            byte byte1 = GetByteFromArray();
+            byte byte2 = GetByteFromArray(ByteBitsCount);
+            byte byte3 = GetByteFromArray(WordBitsCount);
+            byte byte4 = GetByteFromArray(WordBitsCount + ByteBitsCount);
+            byte byte5 = GetByteFromArray(DWordBitsCount);
+            byte byte6 = GetByteFromArray(DWordBitsCount + ByteBitsCount);
+            byte byte7 = GetByteFromArray(DWordBitsCount + WordBitsCount);
+            byte byte8 = GetByteFromArray(DWordBitsCount + WordBitsCount + ByteBitsCount);
+            byte[] bytes = { byte1, byte2, byte3, byte4, byte5, byte6, byte7, byte8 };
+
+            if (!BitConverter.IsLittleEndian)
+                Array.Reverse(bytes);
+
+            double result = BitConverter.ToDouble(bytes, 0);
+
+            mBitsRead += QWordBitsCount;
+
+            return result;
+        }
+
 //        private DateTime ReadDateTime()
 //        {
 //            int unixTime = unchecked((int)ReadCustomeUInt32(DWordBitsCount));

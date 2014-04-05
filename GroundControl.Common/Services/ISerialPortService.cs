@@ -1,6 +1,8 @@
 ﻿namespace GroundControl.Common.Services
 {
-    public interface ISerialPortService
+    using System.ComponentModel;
+
+    public interface ISerialPortService : INotifyPropertyChanged
     {
         void Open();
 

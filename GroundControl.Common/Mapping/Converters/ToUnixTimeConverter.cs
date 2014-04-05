@@ -21,18 +21,18 @@
         {
             value.CheckNull("value");
 
-            var integer = (Integer32)value;
+            var integer = (int)value;
 
             try
             {
-                var dt = integer.TypedValue.ToUnixDateTime();
+                var dt = integer.ToUnixDateTime();
                 return dt.ToString("dd.MM.yyyy HH:mm:ss");
             }
             catch
             {
             }
 
-            return integer.TypedValue.ToString(CultureInfo.InvariantCulture);
+            return integer.ToString(CultureInfo.InvariantCulture);
         }
 
         #endregion

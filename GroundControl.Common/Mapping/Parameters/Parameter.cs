@@ -9,6 +9,8 @@
     using GroundControl.Common.Properties;
 
     [DataContract]
+    [KnownType(typeof(Float))]
+    [KnownType(typeof(Double))]
     [KnownType(typeof(Integer8))]
     [KnownType(typeof(Integer16))]
     [KnownType(typeof(Integer32))]
@@ -17,15 +19,9 @@
     [KnownType(typeof(UnsignedInteger32))]
     public abstract class Parameter
     {
-        #region Fields
-
-        private Converter mConverter;
-
-        #endregion
-
         #region Constructor
 
-        protected Parameter(string name, string displayName, int bitsCount, int maxBitsCount)
+        protected Parameter(string name, string displayName, int bitsCount, int maxBitsCount, string converterName = null)
         {
             name.CheckNull("name");
             displayName.CheckNull("displayName");
@@ -39,6 +35,7 @@
             Name = name;
             DisplayName = displayName;
             BitsCount = bitsCount;
+            ConverterName = converterName;
         }
 
         #endregion
@@ -81,10 +78,8 @@
         [UsedImplicitly]
         void OnDeserialized(StreamingContext c)
         {
-//            if (ConverterName == null)
-//                Converter = DefaultConverter
-//            else
-//                Converter = Converters[Convertername]
+            if (ConverterName != null)
+                Converter = ConvertersCollection.Instance()[ConverterName];
 
             if (DisplayName == null)
                 DisplayName = Name;

@@ -1,11 +1,13 @@
 ﻿namespace GroundControl.Services
 {
+    using System.ComponentModel;
     using System.IO.Ports;
 
     using GroundControl.Common.Extensions;
+    using GroundControl.Common.Properties;
     using GroundControl.Common.Services;
 
-    internal class SerialPortService : ISerialPortService
+    internal sealed class SerialPortService : ISerialPortService
     {
         #region Fields
 
@@ -26,17 +28,35 @@
 
         #region ISerialPortService
 
-        void ISerialPortService.Open()
+        public void Open()
         {
             mPort.Open();
+            OnPropertyChanged("IsOpen");
         }
 
-        void ISerialPortService.Close()
+        public void Close()
         {
             mPort.Close();
+            OnPropertyChanged("IsOpen");
         }
 
-        bool ISerialPortService.IsOpen { get { return mPort.IsOpen; } }
+        public bool IsOpen { get { return mPort.IsOpen; } }
+
+        #endregion
+
+        #region INotifyPropertyChanged
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        private void OnPropertyChanged(string propertyName)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
 
         #endregion
     }

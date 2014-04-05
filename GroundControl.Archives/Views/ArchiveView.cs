@@ -20,7 +20,9 @@
 
         private readonly ArchiveViewModel mViewModel;
 
-        private readonly Dictionary<object, ICommand> mCommands = new Dictionary<object, ICommand>();
+        private readonly Dictionary<object, Action> mCommands = new Dictionary<object, Action>();
+
+        private Lazy<RadContextMenu> mLazyContextMenu;
 
         #endregion
 
@@ -43,28 +45,33 @@
 
         private void OnLoad(object sender, EventArgs e)
         {
-            var column = mArchiveRecordsGridView.Columns.FirstOrDefault(x => x.Name == "Crc16Matched");
-            if (column != null)
-            {
-                var obj = new ConditionalFormattingObject
-                {
-                    Name = "BadCrc",
-                    ConditionType = ConditionTypes.Equal,
-                    TValue1 = "False",
-                    ApplyToRow = true,
-                    RowForeColor = Color.Red
-                };
+            PrepareMenus();
+            PrepareColumns();
+            PrepareConditionalFormattingColumns();
+        }
 
-                column.ConditionalFormattingObjectList.Add(obj);
-            }
+        private void OnDecMenuMenuItemClick(object sender, EventArgs e)
+        {
+            var column = mLazyContextMenu.Value.DropDown.Tag as GridViewDecimalColumn;
+            if (column != null)
+                column.FormatString = @"{0:D}";
+        }
+
+        private void OnHexMenuMenuItemClick(object sender, EventArgs eventArgs)
+        {
+            var column = mLazyContextMenu.Value.DropDown.Tag as GridViewDecimalColumn;
+            if (column != null)
+                column.FormatString = @"0x{0:X}";
         }
 
         private void OnArchiveRecordsGridViewDataBindingComplete(object sender, GridViewBindingCompleteEventArgs e)
         {
-            foreach (var column in mArchiveRecordsGridView.Columns.Where(column => 
-                column.Name.StartsWith("Raw", StringComparison.OrdinalIgnoreCase)))
+            foreach (var column in mArchiveRecordsGridView.Columns)
             {
-                column.IsVisible = false;
+                if (column.Name.Contains("Raw"))
+                {
+                    column.IsVisible = false;
+                }
             }
         }
 
@@ -77,9 +84,36 @@
             }
         }
 
+        private void OnArchiveBindingSourceChanged(object sender, ListChangedEventArgs e)
+        {
+            if (e.ListChangedType == ListChangedType.Reset)
+                mArchiveRecordsGridView.BestFitColumns();
+        }
+
+        private void OnArchiveRecordsGridViewContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
+        {
+            var cell = e.ContextMenuProvider as GridHeaderCellElement;
+
+            if (cell == null)
+                return;
+
+            var column = cell.Data as GridViewDecimalColumn;
+
+            if (column != null)// && column.DataType != typeof(float) && column.DataType != typeof(double))
+            {
+                var type = column.DataType;
+                if (type != typeof(sbyte) && type != typeof(short) && type != typeof(int) &&
+                    type != typeof(byte) && type != typeof(ushort) && type != typeof(uint))
+                    return;
+
+                mLazyContextMenu.Value.DropDown.Tag = cell.Data;
+                e.ContextMenu = mLazyContextMenu.Value.DropDown;
+            }
+        }
+
         private void OnButtonClick(object sender, EventArgs e)
         {
-            mCommands[sender].Execute();
+            mCommands[sender].Invoke();
         }
 
         #endregion
@@ -89,8 +123,9 @@
         private void BindViewModel()
         {
             //archive records
-            mArchiveRecordsBindingSource.DataSource = mViewModel;
-            mArchiveRecordsBindingSource.DataMember = mViewModel.MemberName(x => x.ArchiveRecords);
+            mArchiveBindingSource.DataSource = mViewModel;
+            mArchiveBindingSource.DataMember = mViewModel.MemberName(x => x.ArchiveRecords);
+            mArchiveBindingSource.ListChanged += OnArchiveBindingSourceChanged;
 
             //position and count for reading
             mRecordPositionSpinEditor.DataBindings.Add("Value", mViewModel, mViewModel.MemberName(x => x.RecordPosition));
@@ -110,15 +145,89 @@
             mArchiveDeepnessTextBox.Text = mViewModel.ArchiveDeepness.ToString(culture);
 
             //add commands
-            mCommands.Add(mReadRecordsBtn, mViewModel.ReadRecordsCommand);
-            mCommands.Add(mReadRegistersBtn, mViewModel.ReadRegistersCommand);
-            mCommands.Add(mEraseArchiveBtn, mViewModel.EraseArchiveCommand);
+            mCommands.Add(mReadRecordsBtn,
+                () =>
+                {
+                    var cell = mArchiveRecordsGridView.CurrentCell;
+                    int columnIndex = 0;
+
+                    if (cell != null)
+                        columnIndex = cell.ColumnIndex;
+
+                    mViewModel.ReadRecordsCommand.Execute();
+
+                    if (cell != null && columnIndex < mArchiveRecordsGridView.ColumnCount)
+                        mArchiveRecordsGridView.TableElement.ScrollToColumn(columnIndex);
+                });
+            mCommands.Add(mReadRegistersBtn, () => mViewModel.ReadRegistersCommand.Execute());
+            mCommands.Add(mEraseArchiveBtn, () => mViewModel.EraseArchiveCommand.Execute());
 
             //blocking ops
             //mRecordsReadingGroupBox.DataBindings.Add("Enabled", mViewModel, "Enabled");
             //mRegistersReadingGroupBox.DataBindings.Add("Enabled", mViewModel, "Enabled");
 
             mViewModel.PropertyChanged += OnViewModelPropertyChanged;
+        }
+
+        private void PrepareMenus()
+        {
+            mLazyContextMenu = new Lazy<RadContextMenu>(
+                () =>
+                {
+                    var contextMenu = new RadContextMenu();
+                    var menuItem1 = new RadMenuItem("Hex");
+                    var menuItem2 = new RadMenuItem("Dec");
+                    
+                    menuItem1.Click += OnHexMenuMenuItemClick;
+                    menuItem2.Click += OnDecMenuMenuItemClick;
+                    
+                    contextMenu.Items.Add(menuItem1);
+                    contextMenu.Items.Add(menuItem2);
+                    return contextMenu;
+                });
+                
+//            mHexMenuItem = new Lazy<RadMenuItem>(
+//                () =>
+//                {
+//                    var item = new RadMenuItem("Hex");
+//                    item.Click += OnHexMenuMenuItemClick;
+//                    return item;
+//                });
+//
+//            mDecMenuItem = new Lazy<RadMenuItem>(
+//                () =>
+//                {
+//                    var item = new RadMenuItem("Dec");
+//                    item.Click += OnDecMenuMenuItemClick;
+//                    return item;
+//                });
+        }
+
+        private void PrepareConditionalFormattingColumns()
+        {
+            var column = mArchiveRecordsGridView.Columns.FirstOrDefault(x => x.Name == "Crc16Matched");
+            if (column != null)
+            {
+                var obj = new ConditionalFormattingObject
+                {
+                    Name = "BadCrc",
+                    ConditionType = ConditionTypes.Equal,
+                    TValue1 = "False",
+                    ApplyToRow = true,
+                    RowForeColor = Color.Red
+                };
+
+                column.ConditionalFormattingObjectList.Add(obj);
+            }
+        }
+
+        private void PrepareColumns()
+        {
+            var count = mArchiveRecordsGridView.ColumnCount;
+            for (int i = 0; i < 6 && i < count; ++i)
+                mArchiveRecordsGridView.Columns[i].PinPosition = PinnedColumnPosition.Left;
+            
+            mArchiveRecordsGridView.BestFitColumns();
         }
 
         #endregion

@@ -6,17 +6,17 @@
     using GroundControl.Common.Mapping.Visitors;
 
     [DataContract]
-    public class Integer8 : Parameter
+    public class Double : Parameter
     {
         #region Constructors
 
-        public Integer8(string name, string converterName = null, int bitsCount = 8)
-            : this(name, name, converterName, bitsCount)
+        public Double(string name)
+            : this(name, name)
         {
         }
 
-        public Integer8(string name, string displayName, string converterName, int bitsCount = 8)
-            : base(name, displayName, bitsCount, 8, converterName)
+        public Double(string name, string displayName)
+            : base(name, displayName, 64, 64)
         {
         }
 
@@ -24,9 +24,9 @@
 
         #region Properties
 
-        public override Type Type { get { return typeof(sbyte); } }
+        public override Type Type { get { return typeof(double); } }
 
-        public sbyte TypedValue { get; set; }
+        public double TypedValue { get; set; }
 
         public override object Value { get { return TypedValue; } }
 
