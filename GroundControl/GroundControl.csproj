@@ -181,7 +181,13 @@
       <Name>GroundControl.Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="config\archives\events_archive.xml" />
+    <Content Include="config\archives\pn_archive.xml" />
+    <Content Include="config\archives\pos_archive.xml" />
+    <Content Include="config\archives\telemetry_archive.xml" />
+    <Content Include="config\converters.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
