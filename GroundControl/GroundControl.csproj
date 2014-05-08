@@ -182,11 +182,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="config\archives\events_archive.xml" />
-    <Content Include="config\archives\pn_archive.xml" />
-    <Content Include="config\archives\pos_archive.xml" />
-    <Content Include="config\archives\telemetry_archive.xml" />
-    <Content Include="config\converters.xml" />
+    <Content Include="config\archives\events_archive.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\archives\pn_archive.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\archives\pos_archive.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\archives\telemetry_archive.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\converters.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

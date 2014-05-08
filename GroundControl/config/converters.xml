@@ -1,182 +1,192 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ConvertersCollection xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/GroundControl.Common.Mapping.Converters">
-  <Converter i:type="ToStringConverterOfint">
-    <Name>SatRtcSourceConverter</Name>
-    <Collection xmlns:d3p1="http://schemas.datacontract.org/2004/07/GroundControl.Common.Helpers">
-      <KeyValuePair>
-        <d3p1:First>1</d3p1:First>
-        <d3p1:Second>бит 0 - машина состяний RTC в случае сбоя</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>2</d3p1:First>
-        <d3p1:Second>бит 1 - GPS модуль</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>4</d3p1:First>
-        <d3p1:Second>бит 2 - modbus (радиолиния)</d3p1:Second>
-      </KeyValuePair>
-    </Collection>
-  </Converter>
-  <Converter i:type="BitsToStringConverter">
-    <Name>SatErrorsConverter</Name>
-    <Collection xmlns:d3p1="http://schemas.datacontract.org/2004/07/GroundControl.Common.Helpers">
-      <KeyValuePair>
-        <d3p1:First>0</d3p1:First>
-        <d3p1:Second>Неисправность часов реального времени (RTC)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>1</d3p1:First>
-        <d3p1:Second>Неисправность внутреннего АЦП</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>2</d3p1:First>
-        <d3p1:Second>Неисправность SPI1(Внешняя флеш AT45 т.е архивы спутника)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>3</d3p1:First>
-        <d3p1:Second>Неисправность SPI2(Внешнее АЦП ADS1248)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>4</d3p1:First>
-        <d3p1:Second>Неисправность USART1(Мастер)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>5</d3p1:First>
-        <d3p1:Second>Неисправность USART3(Подчинённый)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>6</d3p1:First>
-        <d3p1:Second>Неисправность UART5(GPS-модуль)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>7</d3p1:First>
-        <d3p1:Second>Неисправность шины  I2C (цифровые магнитометр и гироскоп)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>8</d3p1:First>
-        <d3p1:Second>Неисправность таймера управления катушками</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>9</d3p1:First>
-        <d3p1:Second>Неисправна микросхема АЦП</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>10</d3p1:First>
-        <d3p1:Second>Неисправна микросхема FLASH</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>11</d3p1:First>
-        <d3p1:Second>Нет связи с модулем GPS</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>12</d3p1:First>
-        <d3p1:Second>MAG3110(цифр. маг.).Нет подтверждения окончания измерений ногой</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>13</d3p1:First>
-        <d3p1:Second>MAG3110.Нет связи по I2C</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>14</d3p1:First>
-        <d3p1:Second>L3G4200(цифр. гиро).Нет подтверждения окончания измерений ногой</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>15</d3p1:First>
-        <d3p1:Second>L3G4200.Нет связи по I2C</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>16</d3p1:First>
-        <d3p1:Second>Нет связи с модулем питания</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>17</d3p1:First>
-        <d3p1:Second>Нет связи с радиомодулем</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>18</d3p1:First>
-        <d3p1:Second>Недостоверные данные аналогового магнитометра (выходят за диапазон значений)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>19</d3p1:First>
-        <d3p1:Second>Недостоверные данные аналогового гироскопа (выходят за диапазон значений)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>20</d3p1:First>
-        <d3p1:Second>Измерения модулем GPS не состоялись (нет приёма сигнала GPS)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>21</d3p1:First>
-        <d3p1:Second>Недостоверные данные цифрового магнитометра (выходят за диапазон значений)</d3p1:Second>
-      </KeyValuePair>
-      <KeyValuePair>
-        <d3p1:First>22</d3p1:First>
-        <d3p1:Second>Недостоверные данные цифрового гироскопа (выходят за диапазон значений)</d3p1:Second>
-      </KeyValuePair>
-    </Collection>
-  </Converter>
-  <Converter i:type="ToStringConverterPairConverterOfbyte">
-    <Name>EventsArchiveConverter</Name>
-    <Collection>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>-6: Отключение подачи питания на модуль GSM</Text>
-        <ConverterName>DefaultConverter</ConverterName>
-        <Id>-6</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>-2: Сброс битов ошибок в слове SatErrors</Text>
-        <ConverterName>SatErrorsConverter</ConverterName>
-        <Id>-2</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>-1: Отключение спутника</Text>
-        <ConverterName>DefaultConverter</ConverterName>
-        <Id>-1</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>1: Включение спутника</Text>
-        <ConverterName>DefaultConverter</ConverterName>
-        <Id>1</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>2: Установка битов ошибок в слове SatErrors</Text>
-        <ConverterName>SatErrorsConverter</ConverterName>
-        <Id>2</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>3: Переключение режимов спутника</Text>
-        <ConverterName>DefaultConverter</ConverterName>
-        <Id>3</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>4: Переключение подрежимов спутника</Text>
-        <ConverterName>DefaultConverter</ConverterName>
-        <Id>4</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>5: Переключение машины состояний ПОС</Text>
-        <ConverterName>DefaultConverter</ConverterName>
-        <Id>5</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>6: Включение подачи питания на модуль GSM</Text>
-        <ConverterName>DefaultConverter</ConverterName>
-        <Id>6</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>7: Установка бортового RTC</Text>
-        <ConverterName>SatRtcSourceConverter</ConverterName>
-        <Id>7</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>8: Установка бортового RTC</Text>
-        <ConverterName>ToUnixTimeConverter</ConverterName>
-        <Id>8</Id>
-      </StringConverterPair>
-      <StringConverterPair i:type="StringConverterPairOfbyte">
-        <Text>9: Установка бортового RTC</Text>
-        <ConverterName>ToUnixTimeConverter</ConverterName>
-        <Id>9</Id>
-      </StringConverterPair>
-    </Collection>
-  </Converter>
+    <Converter i:type="ToStringConverterOfint">
+        <Name>SatRtcSourceConverter</Name>
+        <Collection xmlns:d3p1="http://schemas.datacontract.org/2004/07/GroundControl.Common.Helpers">
+            <KeyValuePair>
+                <d3p1:First>1</d3p1:First>
+                <d3p1:Second>бит 0 - машина состяний RTC в случае сбоя</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>2</d3p1:First>
+                <d3p1:Second>бит 1 - GPS модуль</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>4</d3p1:First>
+                <d3p1:Second>бит 2 - modbus (радиолиния)</d3p1:Second>
+            </KeyValuePair>
+        </Collection>
+    </Converter>
+    <Converter i:type="BitsToStringConverter">
+        <Name>SatErrorsConverter</Name>
+        <Collection xmlns:d3p1="http://schemas.datacontract.org/2004/07/GroundControl.Common.Helpers">
+            <KeyValuePair>
+                <d3p1:First>0</d3p1:First>
+                <d3p1:Second>Неисправность часов реального времени (RTC)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>1</d3p1:First>
+                <d3p1:Second>Неисправность внутреннего АЦП</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>2</d3p1:First>
+                <d3p1:Second>Неисправность SPI1(Внешняя флеш AT45 т.е архивы спутника)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>3</d3p1:First>
+                <d3p1:Second>Неисправность SPI2(Внешнее АЦП ADS1248)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>4</d3p1:First>
+                <d3p1:Second>Неисправность USART1(Мастер)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>5</d3p1:First>
+                <d3p1:Second>Неисправность USART3(Подчинённый)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>6</d3p1:First>
+                <d3p1:Second>Неисправность UART5(GPS-модуль)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>7</d3p1:First>
+                <d3p1:Second>Неисправность шины  I2C (цифровые магнитометр и гироскоп)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>8</d3p1:First>
+                <d3p1:Second>Неисправность таймера управления катушками</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>9</d3p1:First>
+                <d3p1:Second>Неисправна микросхема АЦП</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>10</d3p1:First>
+                <d3p1:Second>Неисправна микросхема FLASH</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>11</d3p1:First>
+                <d3p1:Second>Нет связи с модулем GPS</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>12</d3p1:First>
+                <d3p1:Second>MAG3110(цифр. маг.).Нет подтверждения окончания измерений ногой</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>13</d3p1:First>
+                <d3p1:Second>MAG3110.Нет связи по I2C</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>14</d3p1:First>
+                <d3p1:Second>L3G4200(цифр. гиро).Нет подтверждения окончания измерений ногой</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>15</d3p1:First>
+                <d3p1:Second>L3G4200.Нет связи по I2C</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>16</d3p1:First>
+                <d3p1:Second>Нет связи с модулем питания</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>17</d3p1:First>
+                <d3p1:Second>Нет связи с радиомодулем</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>18</d3p1:First>
+                <d3p1:Second>Недостоверные данные аналогового магнитометра (выходят за диапазон значений)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>19</d3p1:First>
+                <d3p1:Second>Недостоверные данные аналогового гироскопа (выходят за диапазон значений)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>20</d3p1:First>
+                <d3p1:Second>Измерения модулем GPS не состоялись (нет приёма сигнала GPS)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>21</d3p1:First>
+                <d3p1:Second>Недостоверные данные цифрового магнитометра (выходят за диапазон значений)</d3p1:Second>
+            </KeyValuePair>
+            <KeyValuePair>
+                <d3p1:First>22</d3p1:First>
+                <d3p1:Second>Недостоверные данные цифрового гироскопа (выходят за диапазон значений)</d3p1:Second>
+            </KeyValuePair>
+        </Collection>
+    </Converter>
+    <Converter i:type="ToStringConverterPairConverterOfbyte">
+        <Name>EventsArchiveConverter</Name>
+        <Collection>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>-6: Отключение подачи питания на модуль GSM</Text>
+                <ConverterName>DefaultConverter</ConverterName>
+                <Id>-6</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>-2: Сброс битов ошибок в слове SatErrors</Text>
+                <ConverterName>SatErrorsConverter</ConverterName>
+                <Id>-2</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>-1: Отключение спутника</Text>
+                <ConverterName>DefaultConverter</ConverterName>
+                <Id>-1</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>1: Включение спутника</Text>
+                <ConverterName>DefaultConverter</ConverterName>
+                <Id>1</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>2: Установка битов ошибок в слове SatErrors</Text>
+                <ConverterName>SatErrorsConverter</ConverterName>
+                <Id>2</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>3: Переключение режимов спутника</Text>
+                <ConverterName>DefaultConverter</ConverterName>
+                <Id>3</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>4: Переключение подрежимов спутника</Text>
+                <ConverterName>DefaultConverter</ConverterName>
+                <Id>4</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>5: Переключение машины состояний ПОС</Text>
+                <ConverterName>DefaultConverter</ConverterName>
+                <Id>5</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>6: Включение подачи питания на модуль GSM</Text>
+                <ConverterName>DefaultConverter</ConverterName>
+                <Id>6</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>7: Установка бортового RTC</Text>
+                <ConverterName>SatRtcSourceConverter</ConverterName>
+                <Id>7</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>8: Установка бортового RTC</Text>
+                <ConverterName>ToUnixTimeConverter</ConverterName>
+                <Id>8</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>9: Установка бортового RTC</Text>
+                <ConverterName>ToUnixTimeConverter</ConverterName>
+                <Id>9</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>10: Переход между подрежимами в режиме OnMeasСalcControl</Text>
+                <ConverterName>DefaultConverter</ConverterName>
+                <Id>10</Id>
+            </StringConverterPair>
+            <StringConverterPair i:type="StringConverterPairOfbyte">
+                <Text>11: Достижение dT11 в 11 подрежиме для OnMeasСalcControl или в OnBrake режиме</Text>
+                <ConverterName>DefaultConverter</ConverterName>
+                <Id>11</Id>
+            </StringConverterPair>
+        </Collection>
+    </Converter>
 </ConvertersCollection>
