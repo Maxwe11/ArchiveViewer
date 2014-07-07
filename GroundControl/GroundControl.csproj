@@ -35,12 +35,6 @@
     <Reference Include="FastMember">
       <HintPath>..\packages\FastMember.1.0.0.11\lib\net40\FastMember.dll</HintPath>
     </Reference>
-    <Reference Include="FtdAdapter">
-      <HintPath>..\packages\NModbus.1.11.0.0\lib\FtdAdapter.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Threading.Tasks">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.165\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
     </Reference>
@@ -50,11 +44,8 @@
     <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.165\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
     </Reference>
-    <Reference Include="Modbus">
-      <HintPath>..\packages\NModbus.1.11.0.0\lib\Modbus.dll</HintPath>
-    </Reference>
-    <Reference Include="Modbus.Extensions">
-      <HintPath>..\packages\NModbus.1.11.0.0\lib\Modbus.Extensions.dll</HintPath>
+    <Reference Include="NModbus4">
+      <HintPath>..\packages\NModbus4.1.11.0.0\lib\net40\NModbus4.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -100,9 +91,6 @@
     <Reference Include="TelerikCommon, Version=2013.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>..\lib\RCWF\2013.3.1016.40\TelerikCommon.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="Unme.Common">
-      <HintPath>..\packages\NModbus.1.11.0.0\lib\Unme.Common.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
