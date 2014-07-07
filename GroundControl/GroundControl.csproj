@@ -164,6 +164,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GroundControl.Archives\GroundControl.Archives.csproj">
+      <Project>{df25c7f0-0e2f-4edb-9a4e-72ea6f5b155e}</Project>
+      <Name>GroundControl.Archives</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GroundControl.Common\GroundControl.Common.csproj">
       <Project>{074cf0bf-5a6a-45b5-a581-2e21705dbc4f}</Project>
       <Name>GroundControl.Common</Name>
