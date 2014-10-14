@@ -62,6 +62,11 @@
             mServices.Add(type, instance);
         }
 
+        public T GetService<T>()
+        {
+            return (T)GetService(typeof(T));
+        }
+
         #endregion
     }
 }

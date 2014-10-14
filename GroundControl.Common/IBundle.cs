@@ -14,5 +14,7 @@
         SettingsBase Settings { get; }
 
         void RegisterService(Type type, object instance);
+
+        T GetService<T>();
     }
 }
