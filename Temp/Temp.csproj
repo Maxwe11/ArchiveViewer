@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GroundControl.Common\GroundControl.Common.csproj">
+    <ProjectReference Include="..\ArchiveViewer.Common\ArchiveViewer.Common.csproj">
       <Project>{074cf0bf-5a6a-45b5-a581-2e21705dbc4f}</Project>
-      <Name>GroundControl.Common</Name>
+      <Name>ArchiveViewer.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

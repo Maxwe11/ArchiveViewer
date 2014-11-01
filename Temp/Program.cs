@@ -2,11 +2,10 @@
 {
     using System.Runtime.Serialization;
     using System.Xml;
-
-    using GroundControl.Common.Decoders.Archives;
-    using GroundControl.Common.Mapping.Converters;
-    using GroundControl.Common.Mapping.Parameters;
-    using GroundControl.Common.Models.Archives;
+    using ArchiveViewer.Common.Decoders.Archives;
+    using ArchiveViewer.Common.Mapping.Converters;
+    using ArchiveViewer.Common.Mapping.Parameters;
+    using ArchiveViewer.Common.Models.Archives;
 
     class Program
     {
