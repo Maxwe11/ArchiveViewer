@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArchiveType xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ArchiveViewer.Common.Models.Archives">
+    <Id>3</Id>
+    <DisplayName>Архів телеметрії</DisplayName>
+    <SlaveId>1</SlaveId>
+    <CommandRegister>3003</CommandRegister>
+    <RecordRegistersCount>66</RecordRegistersCount>
+    <RecordsCount>1600</RecordsCount>
+    <DecoderType>Complex</DecoderType>
+    <RecordMetaDataBytesCount>12</RecordMetaDataBytesCount>
+    <Parameters xmlns:d2p1="http://schemas.datacontract.org/2004/07/ArchiveViewer.Common.Mapping.Parameters" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+        <d2p1:ParametersCollection>
+            <d2p1:CollectionId>0</d2p1:CollectionId>
+            <d2p1:Parameters>
+                <!--10.2.1-->
+                <!--Sun2 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun1_Tmp</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun1_Tmp</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun1_X</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun1_X</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun1_rX</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun1_rX</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun1_X</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun1_Y</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun1_rX</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun1_rY</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!--Sun2 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun2_Tmp</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun2_Tmp</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun2_X</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun2_X</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun2_rX</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun2_rX</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun2_X</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun2_Y</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun2_rX</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun2_rY</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!--Sun3-->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun3_Tmp</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun3_Tmp</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun3_X</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun3_X</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun3_rX</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun3_rX</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun3_X</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun3_Y</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Sun3_rX</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Sun3_rY</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 16 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Tmp</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Tmp</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Vref</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Vref</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_Vbat</d2p1:Name>
+                    <d2p1:DisplayName>ADC_Vbat</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 19 MUX -->
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_MUX_I3.3</d2p1:Name>
+                    <d2p1:DisplayName>ADC_MUX_I3.3</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_MUX_I5</d2p1:Name>
+                    <d2p1:DisplayName>ADC_MUX_I5</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_MUX_V1.25</d2p1:Name>
+                    <d2p1:DisplayName>ADC_MUX_V1.25</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_MUX_Tmag</d2p1:Name>
+                    <d2p1:DisplayName>ADC_MUX_Tmag</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>ADC_MUX_Tgyro</d2p1:Name>
+                    <d2p1:DisplayName>ADC_MUX_Tgyro</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 24 HMC -->
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>HMC1003.SetX</d2p1:Name>
+                    <d2p1:DisplayName>HMC1003.SetX</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>HMC1003.SetY</d2p1:Name>
+                    <d2p1:DisplayName>HMC1003.SetY</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>HMC1003.SetZ</d2p1:Name>
+                    <d2p1:DisplayName>HMC1003.SetZ</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>HMC1003.ResetX</d2p1:Name>
+                    <d2p1:DisplayName>HMC1003.ResetX</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>HMC1003.ResetY</d2p1:Name>
+                    <d2p1:DisplayName>HMC1003.ResetY</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>HMC1003.ResetZ</d2p1:Name>
+                    <d2p1:DisplayName>HMC1003.ResetZ</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 30 -->
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Vbridge</d2p1:Name>
+                    <d2p1:DisplayName>Vbridge</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>ADS1248_Tmp</d2p1:Name>
+                    <d2p1:DisplayName>ADS1248_Tmp</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 32 LPR_LY -->
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>LPR_LY.X</d2p1:Name>
+                    <d2p1:DisplayName>LPR_LY.X</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>LPR_LY.Y</d2p1:Name>
+                    <d2p1:DisplayName>LPR_LY.Y</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>LPR_LY.Z</d2p1:Name>
+                    <d2p1:DisplayName>LPR_LY.Z</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 35 L3G4200 -->
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>L3G4200.X</d2p1:Name>
+                    <d2p1:DisplayName>L3G4200.X</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>L3G4200.Y</d2p1:Name>
+                    <d2p1:DisplayName>L3G4200.Y</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>L3G4200.Z</d2p1:Name>
+                    <d2p1:DisplayName>L3G4200.Z</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>L3G4200.Tmp</d2p1:Name>
+                    <d2p1:DisplayName>L3G4200.Tmp</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 39 MAG3110 -->
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>MAG3110.X</d2p1:Name>
+                    <d2p1:DisplayName>MAG3110.X</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>MAG3110.Y</d2p1:Name>
+                    <d2p1:DisplayName>MAG3110.Y</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>MAG3110.Z</d2p1:Name>
+                    <d2p1:DisplayName>MAG3110.Z</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>MAG3110.Tmp</d2p1:Name>
+                    <d2p1:DisplayName>MAG3110.Tmp</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 43 -->
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sun_Tmp1_C</d2p1:Name>
+                    <d2p1:DisplayName>Sun_Tmp1_C</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sun_Tmp2_C</d2p1:Name>
+                    <d2p1:DisplayName>Sun_Tmp2_C</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sun_Tmp3_C</d2p1:Name>
+                    <d2p1:DisplayName>Sun_Tmp3_C</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>CPU_Tmp_C</d2p1:Name>
+                    <d2p1:DisplayName>CPU_Tmp_C</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 44 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>Vref_V</d2p1:Name>
+                    <d2p1:DisplayName>Vref_V</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>Vbat_V</d2p1:Name>
+                    <d2p1:DisplayName>Vbat_V</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 46 MUX -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>MUX_I3.3</d2p1:Name>
+                    <d2p1:DisplayName>MUX_I3.3</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>MUX_I5</d2p1:Name>
+                    <d2p1:DisplayName>MUX_I5</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>MUX_V1.25</d2p1:Name>
+                    <d2p1:DisplayName>MUX_V1.25</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 49 MUX_C -->
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>MUX_Tmag_C</d2p1:Name>
+                    <d2p1:DisplayName>MUX_Tmag_C</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>MUX_Tgyro_C</d2p1:Name>
+                    <d2p1:DisplayName>MUX_Tgyro_C</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 51 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>MAG_VBR_V</d2p1:Name>
+                    <d2p1:DisplayName>MAG_VBR_V</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 52 -->
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>ADS1248_Tmp_C</d2p1:Name>
+                    <d2p1:DisplayName>ADS1248_Tmp_C</d2p1:DisplayName>
+					<d2p1:BitsCount>12</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 53 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger32">
+                    <d2p1:Name>DEVICE_ERRORS</d2p1:Name>
+                    <d2p1:DisplayName>DEVICE_ERRORS</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 54 -->
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>SAT_MODE</d2p1:Name>
+                    <d2p1:DisplayName>SAT_MODE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>SAT_SUBMODE</d2p1:Name>
+                    <d2p1:DisplayName>SAT_SUBMODE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>RTC_STATE</d2p1:Name>
+                    <d2p1:DisplayName>RTC_STATE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>ADC_STATE</d2p1:Name>
+                    <d2p1:DisplayName>ADC_STATE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>ADS1248_WORK_STATE</d2p1:Name>
+                    <d2p1:DisplayName>ADS1248_WORK_STATE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>MAGGYRO_STATE</d2p1:Name>
+                    <d2p1:DisplayName>MAGGYRO_STATE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>MAG3110_STATE</d2p1:Name>
+                    <d2p1:DisplayName>MAG3110_STATE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>L3G4200_STATE</d2p1:Name>
+                    <d2p1:DisplayName>L3G4200_STATE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>POS_State</d2p1:Name>
+                    <d2p1:DisplayName>POS_State</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>BINR_STATE</d2p1:Name>
+                    <d2p1:DisplayName>BINR_STATE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>SPI_ADC_state</d2p1:Name>
+                    <d2p1:DisplayName>SPI_ADC_state</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>I2С_state</d2p1:Name>
+                    <d2p1:DisplayName>I2С_state</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 66 -->
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>MagGyroOnOff</d2p1:Name>
+                    <d2p1:DisplayName>MagGyroOnOff</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>mag3110_OnOff</d2p1:Name>
+                    <d2p1:DisplayName>mag3110_OnOff</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>l3g4200d_OnOff</d2p1:Name>
+                    <d2p1:DisplayName>l3g4200d_OnOff</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+            </d2p1:Parameters>
+        </d2p1:ParametersCollection>
+        <d2p1:ParametersCollection>
+            <d2p1:CollectionId>1</d2p1:CollectionId>
+            <d2p1:Parameters>
+                <!--10.2.1-->
+				<!-- 1 -->
+                <d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>RM_ErrType</d2p1:Name>
+                    <d2p1:DisplayName>RM_ErrType</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>RM_DataErr</d2p1:Name>
+                    <d2p1:DisplayName>RM_DataErr</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>RM_NumMiss</d2p1:Name>
+                    <d2p1:DisplayName>RM_NumMiss</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>RM_ss256</d2p1:Name>
+                    <d2p1:DisplayName>RM_ss256</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>RM_time_s</d2p1:Name>
+                    <d2p1:DisplayName>RM_time_s</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+				<!-- 6 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>DeviceStatus</d2p1:Name>
+                    <d2p1:DisplayName>DeviceStatus</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>rtc_s</d2p1:Name>
+                    <d2p1:DisplayName>rtc_s</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>RM_RTC_STATE</d2p1:Name>
+                    <d2p1:DisplayName>RM_RTC_STATE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>RM_ADC_STATE</d2p1:Name>
+                    <d2p1:DisplayName>RM_ADC_STATE</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 8 -->
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>T_amp2</d2p1:Name>
+                    <d2p1:DisplayName>T_amp2</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 10 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>_3_3V</d2p1:Name>
+                    <d2p1:DisplayName>_3_3V</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>_3_3V_rf</d2p1:Name>
+                    <d2p1:DisplayName>_3_3V_rf</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>_3_3V_rf_amp</d2p1:Name>
+                    <d2p1:DisplayName>_3_3V_rf_amp</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>t_cpu</d2p1:Name>
+                    <d2p1:DisplayName>t_cpu</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>adc_ref</d2p1:Name>
+                    <d2p1:DisplayName>adc_ref</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>rf_power</d2p1:Name>
+                    <d2p1:DisplayName>rf_power</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>rf_recive_1</d2p1:Name>
+                    <d2p1:DisplayName>rf_recive_1</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>rf_recive_2</d2p1:Name>
+                    <d2p1:DisplayName>rf_recive_2</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 16 -->
+				<d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>PM_ErrType</d2p1:Name>
+                    <d2p1:DisplayName>PM_ErrType</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>PM_DataErr</d2p1:Name>
+                    <d2p1:DisplayName>PM_DataErr</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>PM_NumMiss</d2p1:Name>
+                    <d2p1:DisplayName>PM_NumMiss</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>PM_ss256</d2p1:Name>
+                    <d2p1:DisplayName>PM_ss256</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>PM_time_s</d2p1:Name>
+                    <d2p1:DisplayName>PM_time_s</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+				<!-- 21 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>Areg_E</d2p1:Name>
+                    <d2p1:DisplayName>Areg_E</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>Outputs_R</d2p1:Name>
+                    <d2p1:DisplayName>Outputs_R</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>Charge</d2p1:Name>
+                    <d2p1:DisplayName>Charge</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 24 -->
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>EAB1</d2p1:Name>
+                    <d2p1:DisplayName>EAB1</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>EAB2</d2p1:Name>
+                    <d2p1:DisplayName>EAB2</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>EAB3</d2p1:Name>
+                    <d2p1:DisplayName>EAB3</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>V_ACB</d2p1:Name>
+                    <d2p1:DisplayName>V_ACB</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>CAB1</d2p1:Name>
+                    <d2p1:DisplayName>CAB1</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>CAB2</d2p1:Name>
+                    <d2p1:DisplayName>CAB2</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>CAB3</d2p1:Name>
+                    <d2p1:DisplayName>CAB3</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 31 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>C_from_SB_all</d2p1:Name>
+                    <d2p1:DisplayName>C_from_SB_all</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>C_Load_all</d2p1:Name>
+                    <d2p1:DisplayName>C_Load_all</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 33 -->
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>T_AB1</d2p1:Name>
+                    <d2p1:DisplayName>T_AB1</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>T_AB2</d2p1:Name>
+                    <d2p1:DisplayName>T_AB2</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>T_AB3</d2p1:Name>
+                    <d2p1:DisplayName>T_AB3</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 36 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>VSBX</d2p1:Name>
+                    <d2p1:DisplayName>VSBX</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>CSBXP</d2p1:Name>
+                    <d2p1:DisplayName>CSBXP</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>CSBXM</d2p1:Name>
+                    <d2p1:DisplayName>CSBXM</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 39 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>VSBY</d2p1:Name>
+                    <d2p1:DisplayName>VSBY</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>CSBYP</d2p1:Name>
+                    <d2p1:DisplayName>CSBYP</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>CSBYM</d2p1:Name>
+                    <d2p1:DisplayName>CSBYM</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 42 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>VSBZ</d2p1:Name>
+                    <d2p1:DisplayName>VSBZ</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>CSBZP</d2p1:Name>
+                    <d2p1:DisplayName>CSBZP</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 44 -->
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>T_E4</d2p1:Name>
+                    <d2p1:DisplayName>T_E4</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 45 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>V33CPU</d2p1:Name>
+                    <d2p1:DisplayName>V33CPU</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>C33CPU</d2p1:Name>
+                    <d2p1:DisplayName>C33CPU</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>V33TX</d2p1:Name>
+                    <d2p1:DisplayName>V33TX</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>C33TX</d2p1:Name>
+                    <d2p1:DisplayName>C33TX</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>V33RX</d2p1:Name>
+                    <d2p1:DisplayName>V33RX</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>C33RX</d2p1:Name>
+                    <d2p1:DisplayName>C33RX</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 51 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>V5</d2p1:Name>
+                    <d2p1:DisplayName>V5</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>C5</d2p1:Name>
+                    <d2p1:DisplayName>C5</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>V_Main_Bus</d2p1:Name>
+                    <d2p1:DisplayName>V_Main_Bus</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>CPSCPU</d2p1:Name>
+                    <d2p1:DisplayName>CPSCPU</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 55 -->
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>T_CPU</d2p1:Name>
+                    <d2p1:DisplayName>T_CPU</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>T_IC</d2p1:Name>
+                    <d2p1:DisplayName>T_IC</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>T_OC</d2p1:Name>
+                    <d2p1:DisplayName>T_OC</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>T_CPU_ITD</d2p1:Name>
+                    <d2p1:DisplayName>T_CPU_ITD</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<!-- 59 -->
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger16">
+                    <d2p1:Name>Restart_Count</d2p1:Name>
+                    <d2p1:DisplayName>Restart_Count</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+            </d2p1:Parameters>
+        </d2p1:ParametersCollection>
+    </Parameters>
+</ArchiveType>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArchiveType xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ArchiveViewer.Common.Models.Archives">
+    <Id>4</Id>
+    <DisplayName>Архів ПН</DisplayName>
+    <SlaveId>1</SlaveId>
+    <CommandRegister>3006</CommandRegister>
+    <RecordRegistersCount>24</RecordRegistersCount>
+    <RecordsCount>1430</RecordsCount>
+    <DecoderType>Complex</DecoderType>
+    <RecordMetaDataBytesCount>12</RecordMetaDataBytesCount>
+    <Parameters xmlns:d2p1="http://schemas.datacontract.org/2004/07/ArchiveViewer.Common.Mapping.Parameters" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+        <d2p1:ParametersCollection>
+            <d2p1:CollectionId>0</d2p1:CollectionId>
+            <d2p1:Parameters>
+				<d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>GPSweek</d2p1:Name>
+                    <d2p1:DisplayName>GPSweek</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Double">
+                    <d2p1:Name>DeltaGPS_UTC</d2p1:Name>
+                    <d2p1:DisplayName>DeltaGPS_UTC</d2p1:DisplayName>
+					<d2p1:BitsCount>64</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>N</d2p1:Name>
+                    <d2p1:DisplayName>N</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>dt_min</d2p1:Name>
+                    <d2p1:DisplayName>dt_min</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+            </d2p1:Parameters>
+        </d2p1:ParametersCollection>
+        <d2p1:ParametersCollection>
+            <d2p1:CollectionId>1</d2p1:CollectionId>
+            <d2p1:Parameters>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>Count</d2p1:Name>
+                    <d2p1:DisplayName>Count</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Double">
+                    <d2p1:Name>Time_UTC</d2p1:Name>
+                    <d2p1:DisplayName>Time_UTC</d2p1:DisplayName>
+					<d2p1:BitsCount>64</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>x</d2p1:Name>
+                    <d2p1:DisplayName>x</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>y</d2p1:Name>
+                    <d2p1:DisplayName>y</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>z</d2p1:Name>
+                    <d2p1:DisplayName>z</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>Vx</d2p1:Name>
+                    <d2p1:DisplayName>Vx</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>Vy</d2p1:Name>
+                    <d2p1:DisplayName>Vy</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>Vz</d2p1:Name>
+                    <d2p1:DisplayName>Vz</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+            </d2p1:Parameters>
+        </d2p1:ParametersCollection>
+        <d2p1:ParametersCollection>
+            <d2p1:CollectionId>2</d2p1:CollectionId>
+            <d2p1:Parameters>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>StateOfBinrStateMachine</d2p1:Name>
+                    <d2p1:DisplayName>StateOfBinrStateMachine</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+            </d2p1:Parameters>
+        </d2p1:ParametersCollection>
+    </Parameters>
+</ArchiveType>

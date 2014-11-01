@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArchiveType xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ArchiveViewer.Common.Models.Archives">
+    <Id>2</Id>
+    <DisplayName>Архів ПОС</DisplayName>
+    <SlaveId>1</SlaveId>
+    <CommandRegister>3009</CommandRegister>
+    <RecordRegistersCount>66</RecordRegistersCount>
+    <RecordsCount>33600</RecordsCount>
+    <DecoderType>Complex</DecoderType>
+    <RecordMetaDataBytesCount>12</RecordMetaDataBytesCount>
+    <Parameters xmlns:d2p1="http://schemas.datacontract.org/2004/07/ArchiveViewer.Common.Mapping.Parameters" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+        <d2p1:ParametersCollection>
+            <d2p1:CollectionId>0</d2p1:CollectionId>
+            <d2p1:Parameters>
+                <!--1.1-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Tмда_изм_UTC</d2p1:Name>
+                    <d2p1:DisplayName>Tмда изм(UTC)</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>Tмда_изм_SS256</d2p1:Name>
+                    <d2p1:DisplayName>Tмда изм(SS256)</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.2-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Вмда_X</d2p1:Name>
+                    <d2p1:DisplayName>Вмда_X</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Вмда_Y</d2p1:Name>
+                    <d2p1:DisplayName>Вмда_Y</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Вмда_Z</d2p1:Name>
+                    <d2p1:DisplayName>Вмда_Z</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.5-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Tмдц_изм_UTC</d2p1:Name>
+                    <d2p1:DisplayName>Tмдц изм(UTC)</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>Tмда_изм_SS256</d2p1:Name>
+                    <d2p1:DisplayName>Tмдц изм(SS256)</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.6-->
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Вмдц_X</d2p1:Name>
+                    <d2p1:DisplayName>Вмдц_X</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Вмдц_Y</d2p1:Name>
+                    <d2p1:DisplayName>Вмдц_Y</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Вмдц_Z</d2p1:Name>
+                    <d2p1:DisplayName>Вмдц_Z</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.9-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Tгда_изм_UTC</d2p1:Name>
+                    <d2p1:DisplayName>Tгда изм(UTC)</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>Tгда_изм_SS256</d2p1:Name>
+                    <d2p1:DisplayName>Tгда изм(SS256)</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.10-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wгда_X</d2p1:Name>
+                    <d2p1:DisplayName>Wгда_X</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wгда_Y</d2p1:Name>
+                    <d2p1:DisplayName>Wгда_Y</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wгда_Z</d2p1:Name>
+                    <d2p1:DisplayName>Wгда_Z</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.13-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Tгдц_изм_UTC</d2p1:Name>
+                    <d2p1:DisplayName>Tгдц изм(UTC)</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>Tгдц_изм_SS256</d2p1:Name>
+                    <d2p1:DisplayName>Tгдц изм(SS256)</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.14-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wгдц_X</d2p1:Name>
+                    <d2p1:DisplayName>Wгдц_X</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wгдц_Y</d2p1:Name>
+                    <d2p1:DisplayName>Wгдц_Y</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wгдц_Z</d2p1:Name>
+                    <d2p1:DisplayName>Wгдц_Z</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.17-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Tднс1_изм_UTC</d2p1:Name>
+                    <d2p1:DisplayName>Tднс1 изм(UTC)</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>Tднс1_изм_SS256</d2p1:Name>
+                    <d2p1:DisplayName>Tднс1 изм(SS256)</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.18-->
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sднс1_X</d2p1:Name>
+                    <d2p1:DisplayName>Sднс1_X</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sднс1_Y</d2p1:Name>
+                    <d2p1:DisplayName>Sднс1_Y</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sднс1_Z</d2p1:Name>
+                    <d2p1:DisplayName>Sднс1_Z</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.21-->
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sднс2_X</d2p1:Name>
+                    <d2p1:DisplayName>Sднс2_X</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sднс2_Y</d2p1:Name>
+                    <d2p1:DisplayName>Sднс2_Y</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sднс2_Z</d2p1:Name>
+                    <d2p1:DisplayName>Sднс2_Z</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--1.24-->
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sднс3_X</d2p1:Name>
+                    <d2p1:DisplayName>Sднс3_X</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sднс3_Y</d2p1:Name>
+                    <d2p1:DisplayName>Sднс3_Y</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>Sднс3_Z</d2p1:Name>
+                    <d2p1:DisplayName>Sднс3_Z</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--2.1-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>T1_UTC</d2p1:Name>
+                    <d2p1:DisplayName>T1(UTC)</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>T1_SS256</d2p1:Name>
+                    <d2p1:DisplayName>T1(SS256)</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--2.2-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wxп1</d2p1:Name>
+                    <d2p1:DisplayName>Wxп1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wyп1</d2p1:Name>
+                    <d2p1:DisplayName>Wyп1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wzп1</d2p1:Name>
+                    <d2p1:DisplayName>Wzп1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--2.5-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q0п1</d2p1:Name>
+                    <d2p1:DisplayName>q0п1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q1п1</d2p1:Name>
+                    <d2p1:DisplayName>q1п1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q2п1</d2p1:Name>
+                    <d2p1:DisplayName>q2п1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q3п1</d2p1:Name>
+                    <d2p1:DisplayName>q3п1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--2.9-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wxк1</d2p1:Name>
+                    <d2p1:DisplayName>Wxк1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wyк1</d2p1:Name>
+                    <d2p1:DisplayName>Wyк1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wzк1</d2p1:Name>
+                    <d2p1:DisplayName>Wzк1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--2.12-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q0к1</d2p1:Name>
+                    <d2p1:DisplayName>q0к1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q1к1</d2p1:Name>
+                    <d2p1:DisplayName>q1к1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q2к1</d2p1:Name>
+                    <d2p1:DisplayName>q2к1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+            </d2p1:Parameters>
+        </d2p1:ParametersCollection>
+        <d2p1:ParametersCollection>
+            <d2p1:CollectionId>1</d2p1:CollectionId>
+            <d2p1:Parameters>
+                <!--2.15-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q3к1</d2p1:Name>
+                    <d2p1:DisplayName>q3к1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--2.16-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q0л1</d2p1:Name>
+                    <d2p1:DisplayName>q0л1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q1л1</d2p1:Name>
+                    <d2p1:DisplayName>q1л1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q2л1</d2p1:Name>
+                    <d2p1:DisplayName>q2л1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q3л1</d2p1:Name>
+                    <d2p1:DisplayName>q3л1</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--2.20-->
+                <d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>Vx1</d2p1:Name>
+                    <d2p1:DisplayName>Vx1</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>Vy1</d2p1:Name>
+                    <d2p1:DisplayName>Vy1</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>Vz1</d2p1:Name>
+                    <d2p1:DisplayName>Vz1</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--2.23-->
+                <d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>X1</d2p1:Name>
+                    <d2p1:DisplayName>X1</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>Y1</d2p1:Name>
+                    <d2p1:DisplayName>Y1</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Float">
+                    <d2p1:Name>Z1</d2p1:Name>
+                    <d2p1:DisplayName>Z1</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--3.1-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>T2_UTC</d2p1:Name>
+                    <d2p1:DisplayName>T2(UTC)</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>T2_SS256</d2p1:Name>
+                    <d2p1:DisplayName>T2(SS256)</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--3.2-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wxп2</d2p1:Name>
+                    <d2p1:DisplayName>Wxп2</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wyп2</d2p1:Name>
+                    <d2p1:DisplayName>Wyп2</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wzп2</d2p1:Name>
+                    <d2p1:DisplayName>Wzп2</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--3.5-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q0п2</d2p1:Name>
+                    <d2p1:DisplayName>q0п2</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q1п2</d2p1:Name>
+                    <d2p1:DisplayName>q1п2</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q2п2</d2p1:Name>
+                    <d2p1:DisplayName>q2п2</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q3п2</d2p1:Name>
+                    <d2p1:DisplayName>q3п2</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--3.9-->
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>nU1</d2p1:Name>
+                    <d2p1:DisplayName>nU1</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>nU2</d2p1:Name>
+                    <d2p1:DisplayName>nU2</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer16">
+                    <d2p1:Name>nU3</d2p1:Name>
+                    <d2p1:DisplayName>nU3</d2p1:DisplayName>
+					<d2p1:BitsCount>16</d2p1:BitsCount>
+                </d2p1:Parameter>
+				<d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>t_U_duration</d2p1:Name>
+                    <d2p1:DisplayName>t_U_duration</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--4.1-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>T3_UTC</d2p1:Name>
+                    <d2p1:DisplayName>T3(UTC)</d2p1:DisplayName>
+					<d2p1:BitsCount>32</d2p1:BitsCount>
+                    <d2p1:ConverterName>ToUnixTimeConverter</d2p1:ConverterName>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:UnsignedInteger8">
+                    <d2p1:Name>T3_SS256</d2p1:Name>
+                    <d2p1:DisplayName>T3(SS256)</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--4.2-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wxп3</d2p1:Name>
+                    <d2p1:DisplayName>Wxп3</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wyп3</d2p1:Name>
+                    <d2p1:DisplayName>Wyп3</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>Wzп3</d2p1:Name>
+                    <d2p1:DisplayName>Wzп3</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <!--4.5-->
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q0п3</d2p1:Name>
+                    <d2p1:DisplayName>q0п3</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q1п3</d2p1:Name>
+                    <d2p1:DisplayName>q1п3</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q2п3</d2p1:Name>
+                    <d2p1:DisplayName>q2п3</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer32">
+                    <d2p1:Name>q3п3</d2p1:Name>
+                    <d2p1:DisplayName>q3п3</d2p1:DisplayName>
+                    <d2p1:BitsCount>24</d2p1:BitsCount>
+                </d2p1:Parameter>
+            </d2p1:Parameters>
+        </d2p1:ParametersCollection>
+        <d2p1:ParametersCollection>
+            <d2p1:CollectionId>2</d2p1:CollectionId>
+            <d2p1:Parameters>
+                <!--6.1-->
+                <d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>POSmachine_state</d2p1:Name>
+                    <d2p1:DisplayName>POSmachine_state</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+                <d2p1:Parameter i:type="d2p1:Integer8">
+                    <d2p1:Name>POSmachState_Aux</d2p1:Name>
+                    <d2p1:DisplayName>POSmachState_Aux</d2p1:DisplayName>
+					<d2p1:BitsCount>8</d2p1:BitsCount>
+                </d2p1:Parameter>
+            </d2p1:Parameters>
+        </d2p1:ParametersCollection>
+    </Parameters>
+</ArchiveType>
