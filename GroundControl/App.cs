@@ -2,14 +2,12 @@
 {
     using System;
     using System.ComponentModel;
-    using System.Diagnostics;
     using System.IO.Ports;
-    using System.Threading;
-    using System.Threading.Tasks;
     using System.Windows.Forms;
 
     using FastMember;
 
+    using GroundControl.Archives;
     using GroundControl.Common.Extensions;
     using GroundControl.Common.Services;
     using GroundControl.Properties;
@@ -67,41 +65,13 @@
             mPortAccessor = new Lazy<ObjectAccessor>(() => ObjectAccessor.Create(mSerialPort));
             CreateServices();
             
-            ProcessingView[] dialog = { new ProcessingView { StartPosition = FormStartPosition.CenterScreen } };
-            var loadPluginsTask = Task.Factory.StartNew(() =>
-            {
-                DebugSleepTestMethod();
-
-                var res = PluginLoader<PluginBase>.LoadPlugins(mBundle.PluginsPath,
-                                                               mSettings.PluginsSearchPattern,
-                                                               mBundle);
-
-                dialog[0].Invoke(new Foo(() => { dialog[0].DialogResult = DialogResult.OK; }));
-                return res;
-            });
-
-            using (dialog[0])
-                dialog[0].ShowDialog();
-
-            dialog[0] = null;
             var viewModel = new AppViewModel(mSettings.AppViewModel_DisplaName, mBundle);
             mView = new AppView(viewModel);
 
-            var plugins = loadPluginsTask.Result;
+            var plugins = new PluginBase[] { new ArchivesPlugin(mBundle) };
 
-            //TO DO: log than Plugins directory doesn't exists
-
-            if (plugins != null)
-                viewModel.AddPlugins(plugins);
-            else
-                MessageBox.Show("Plugins directory doesn't exists");
+            viewModel.AddPlugins(plugins);
         }
-
-        #endregion
-
-        #region Delegates
-
-        private delegate void Foo();
 
         #endregion
 
@@ -129,12 +99,6 @@
         #endregion
 
         #region Methods
-
-        [Conditional("DEBUG")]
-        static void DebugSleepTestMethod()
-        {
-            Thread.Sleep(2000);
-        }
 
         private void CreateServices()
         {

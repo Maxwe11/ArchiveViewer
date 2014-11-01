@@ -33,11 +33,9 @@
         {
             bundle.CheckNull("bundle");
 
-            var service = bundle.GetService(typeof(IModbusMasterService));
-            mModbusMaster = (IModbusMasterService)service;
+            mModbusMaster = bundle.GetService<IModbusMasterService>();
 
-            service = bundle.GetService(typeof(ISerialPortService));
-            mSerialPortService = (ISerialPortService)service;
+            mSerialPortService = bundle.GetService<ISerialPortService>();
 
             var path = Path.Combine(bundle.ConfigurationPath, "archives");
             var archivesProvider = new ArchivesProviderService(path);
