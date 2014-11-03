@@ -43,11 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Decoders\Archives\ArchiveDecoder.cs" />
-    <Compile Include="Decoders\ArchiveDecoderBase.cs" />
     <Compile Include="Decoders\Archives\ArchiveDecoderType.cs" />
     <Compile Include="Decoders\Archives\ComplexArchiveDecoder.cs" />
     <Compile Include="Decoders\Archives\CustomSimpleArchiveDecoder.cs" />
-    <Compile Include="Decoders\ComplexArchiveDecoder.cs" />
     <Compile Include="Decoders\Archives\ArchiveDecodeResult.cs" />
     <Compile Include="Decoders\Archives\IArchiveDecoder.cs" />
     <Compile Include="Extensions\ArrayEx.cs" />
